@@ -1,6 +1,3 @@
-An Open Source PCB Business/Portfolio Card with NFC and Design Inspired by Bleach
-
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -9,46 +6,40 @@ An Open Source PCB Business/Portfolio Card with NFC and Design Inspired by Bleac
 
 <br />
 <div align="center">
-  <a><img src="assets/Fullbringer.png" alt="logo" width="100" height="100">
+  <a><img src="assets/Fullbringer.png" alt="logo" width="120" height="100">
   </a>
-  <h3 align="center">Vashtastic</h3>
+  <h3 align="center">FullBringer</h3>
 
   <p align="center">
-    A Cooler Meshtastic Node
+    A Cooler PCB Card
     <br />
     <br />
-    <a href="https://github.com/TrulyVagabond/Vashtastic/blob/main/JOURNAL.md">Journal</a>
+    <a href="https://github.com/TrulyVagabond/FullBringer/blob/main/JOURNAL.md">Journal</a>
     &middot;
-    <a href="https://github.com/TrulyVagabond/Vashtastic/issues">Report Bug</a>
+    <a href="https://github.com/TrulyVagabond/FullBringer/issues">Report Bug</a>
     &middot;
-    <a href="https://github.com/TrulyVagabond/Vashtastic/issues">Request Feature</a>
+    <a href="https://github.com/TrulyVagabond/FullBringer/issues">Request Feature</a>
   </p>
 </div>
 
-## What is Vashtastic?
+## What is FullBringer?
 
-<p align="center"><img src="assets/Vashtastic.png" /></p>
+<p align="center"><img src="PCB/FullBringer-Front.png" /></p>
 
-<p align="center"><img src="assets/Vashtastic-pcb1.png" /></p>
+<p align="center"><img src="PCB/FullBringer-Back.png" /></p>
 
-<p align="center"><img src="assets/Vashtastic-pcb-front.png" /></p>
-
-<p align="center"><img src="assets/Vashtastic-Case.png" /></p>
-
-Vashtastic is an off-grid communication terminal. This Project integrates a Custom Printed Circuit Board (PCB) with a Heavily Customized 3D-printable enclosure. Designed to Operate Completely Independent of cellular networks and Wi-Fi, Vashtastic Leverages Long Range (LoRa) Radio Frequencies to send and receive data across Vast distances. It is basically a way of communication without internet.
+FullBringer is A PCB Business/Portfolio/ID Card with NFC and Design Inspired by Bleach. There are 2 LED's on the Front and the Entire Circuit on the Bottom Layer. This is Purely Designed to Look Cooler and Impress Recruiters or Friends. The integrated planar antenna harvests power from the phone's magnetic field to illuminate two red LEDs embedded in the skull's eye sockets, while simultaneously broadcasting an NDEF payload (custom URL, or GitHub portfolio) directly to the device.
 
 ### Built With
 
 * [![EasyEDA][EasyEDA]][EasyEDA-url]
-* [![FreeCAD][FreeCAD]][FreeCAD-url]
 * [![Inkscape][Inkscape]][Inkscape-url]
 
 ## Getting Started
 
-To get Your own Vashtastic, you need three things.
+To get Your own FullBringer, you need two things.
 
 - PCB
-- 3d-Printed Enclosure
 - Money
 
 ### Ordering the PCB
@@ -61,91 +52,61 @@ To get Your own Vashtastic, you need three things.
 
 4. Standard Manufacturing Settings (1.6mm thickness, HASL finish) work Perfectly for this Board.
 
-
-### 3D Printing the Enclosure
-
-1. Navigate to the **"CAD"** folder.
-
-2. Download any of the File Formats and Upload it into your Desired 3D slicing Software.
-
-3. Use a durable, temperature-resistant filament like **PETG or ABS**. Set your wall thickness to at least 4 perimeters for high structural strength.
-
-4. **Important**: Print the D-pad and Zoom buttons with the flat "cap" face pointing UP, and enable supports for the internal flanges.
-
 ## Bills Of Materials (BOM)
 
+| Item | Designator | Qty | Value / Param | Package | Description | Manufacturer | MPN | JLCPCB / LCSC Part # |
+| :---: | :--- | :---: | :--- | :--- | :--- | :--- | :--- | :---: |
+| 1 | **U1** | 1 | 13.56 MHz | XQFN-8 (1.6×1.6mm) | NTAG I²C Plus NFC Transponder IC with Energy Harvesting Rail (`VOUT`) | NXP Semiconductors | `NT3H1101W0FHKH` | [C73156](https://www.lcsc.com/product-detail/C73156.html) |
+| 2 | **C1** | 1 | 1 µF, 50V, X5R | 0603 | Energy Harvesting Buffer & Decoupling Capacitor (VOUT to GND) | Samsung Electro-Mechanics | `CL10A105KB8NNNC` | [C15849](https://www.lcsc.com/product-detail/C15849.html) |
+| 3 | **C2** | 1 | 33 pF, 50V, C0G/NP0 | 0603 | RF Tank Tuning Capacitor (Parallel across LA/LB terminals) | Samsung Electro-Mechanics | `CL10C330JB8NNNC` | [C1663](https://www.lcsc.com/product-detail/C1663.html) |
+| 4 | **R1, R2** | 2 | 470 Ω, 1% | 0603 | Current-Limiting Resistors for Eye LEDs (~1.2 mA per branch) | UNI-ROYAL (厚声) | `0603WAF4700T5E` | [C23179](https://www.lcsc.com/product-detail/C23179.html) |
+| 5 | **LED1, LED2** | 2 | 620–625 nm (Red) | 0603 (1608 Metric) | High-Efficiency Red SMD Diffused LEDs (Skull Eye Sockets) | KENTO (广东风华) | `KT-0603R` | [C2286](https://www.lcsc.com/product-detail/C2286.html) |
+| 6 | **ANT** | 1 | ~1.65 µH | PCB Trace | 5-Turn Hexagonal Planar Spiral Inductor (0.4 mm width / 0.4 mm spacing) | Custom Embedded | Embedded Copper | *Integrated* | 
 
+### **Total: $6-7** (DON'T SAY IT)
 
-## Assembling Vashtastic
+## Using FullBringer
 
-- **PCB Assembly:**
-
-   1. You can Either Order the PCB pre-soldered from Manufacturers. or you can Solder on your own. See the PCB layout for Soldering. 
-
-  2. After Soldering and getting the PCB ready, you just have to attach the U.FL to SMA Cable to the PCB and the Antenna and Screw in the E-ink Display.
-
-  3. After Doing all that, Your PCB would finally be ready.
-
-- **Case Assembly:**
-
-  1. 3D Print the Enclosure with the Specified Settings Above.
-
-  2. You Must 3D print the Front and Back Shell Separately. The Front Shell Contains the Holes for the Buttons and E-ink Display. The Back Shell Contains a Space for the Battery Sled to go in and a Hole For Smooth Connection between the Battery and the Connector on the PCB (JST connector)
-
-  3. Put the Antenna Through the Hole in the Enclosure.
-
-  4. Add the buttons in the Desired hole Created in the Enclosure Before Closing it shut.
-
-  5. After Adding the battery in the Back Shell and Covering it with the Battery Cover. Use **M3 Screws** to Screw in everything, The Front Shell and Back Shell, and the Battery Cover. 
-
-  6. Your **Vashtastic** is Ready to Use.
-
-
-#### <p align="center">Note: This Repo Does Not Contain the Firmware. Add the Firmware On Your Own.</p>
-
-## Using Vashtastic
-
-Vashtastic Comes in 2 types of Usage. You can flash the Required Firmware and then you can use the:
-
-  1. Maps Layout
-  2. Normal Meshtastic Layout
-
-### Maps Layout:
-
-The Maps Layout is the Intended way to use Vashtastic. You can Add Your Friends Device in the **"Normal Meshtastic Layout"** and then when you switch to the Maps Layout You can see the Exact Coordinates of Your Friend's Device. and Communicate with him From Vast distances
-(20+ Km)
-
-Use the Buttons to Navigate the E-Ink Display. 
-
-- **D-Pad**:
-Use the D-Pad to navigate the display by pressing the Buttons for the Intended Direction. Cmon bruh You've a use a D-pad before.
-
-- **Zoom-Button**:
-Use the Circular Button above the D-Pad to Zoom into the Map.
-
-### Normal Meshtastic Layout: 
-
-Use this to add Your Friends and Setting up the Device. Check **Meshtastic Repo** for More Information.
-
-## Contributing:
-
-You can Contribute by Writing the Firmware for me HAHA. or Making Awesome Changes to the Case.
+You Just need to Solder the Chip/Capacitors etc (unless you bought from PCBWay). Then Just use the Free NFC tools App for Android/IOS to Setup the NFC. Thats it, your Fullbringer is Ready!
 
 ## Special Thanks:
 
-- **FreeCAD** for the Amazing 3D Modeling Free Software.
-
 - **EasyEDA** for the Amazing PCB Designing Free Software.
 
-- **Hack Club** for making me Motivated enough to make this haha.
+- **Hack Club** for making me Motivated enough to make this.
 
 ## License
 
 This Project is Distributed Under MIT License. Check License.txt for More Information.
 
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/TrulyVagabond/FullBringer.svg?style=for-the-badge
+[contributors-url]: https://github.com/TrulyVagabond/FullBringer/graphs/contributors
+
+[forks-shield]: https://img.shields.io/github/forks/TrulyVagabond/FullBringer.svg?style=for-the-badge
+[forks-url]: https://github.com/TrulyVagabond/FullBringer/network/members
+
+[stars-shield]: https://img.shields.io/github/stars/TrulyVagabond/FullBringer.svg?style=for-the-badge
+[stars-url]: https://github.com/TrulyVagabond/FullBringer/stargazers
+
+[issues-shield]: https://img.shields.io/github/issues/TrulyVagabond/FullBringer.svg?style=for-the-badge
+[issues-url]: https://github.com/TrulyVagabond/FullBringer/issues
+
+[license-shield]: https://img.shields.io/github/license/TrulyVagabond/FullBringer.svg?style=for-the-badge
+[license-url]: https://github.com/TrulyVagabond/FullBringer/blob/main/LICENSE
+
+[EasyEDA]: https://img.shields.io/badge/EasyEDA-0177D7?style=for-the-badge
+[EasyEDA-url]: https://easyeda.com/
+
+[FreeCAD]: https://img.shields.io/badge/FreeCAD-2D9CDB?style=for-the-badge&logo=freecad&logoColor=white
+[FreeCAD-url]: https://www.freecad.org/
+
+[Inkscape]: https://img.shields.io/badge/Inkscape-000000?style=for-the-badge&logo=inkscape&logoColor=white
+[Inkscape-url]: https://inkscape.org/
+
 <br>
 
-###### Note: A.I was only used for Research Purposes. 
+###### Note: A.I was only used for Research Purposes.
 
 
   
